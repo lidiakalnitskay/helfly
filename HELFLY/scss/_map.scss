@@ -1,0 +1,65 @@
+.map {
+    position: relative;
+}
+
+.map__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    left: 20%;
+    max-width: 420px;
+    height: 469px;
+    background: $white;
+    padding: 50px 30px;
+    @include breakpoint(m) {
+        display: none;
+    }
+    .map__block {
+        display: flex;
+        .block-img {
+            margin-right: 18px;
+        }
+        .block-text {
+            .block-title {
+                font-weight: 500;
+                @include adaptiv-font(18, 16);
+                @include adaptiv-value("line-height", 27, 25, 0);
+            }
+            .block-paragraph {
+                font-weight: 400;
+                @include adaptiv-font(18, 16);
+                @include adaptiv-value("line-height", 26, 24, 0);
+            }
+        }
+    }
+}
+
+.photographer {
+    display: flex;
+    .photographer__img {
+        margin-right: 18px;
+    }
+    .photographer__title {
+        font-weight: 500;
+        @include adaptiv-font(18, 16);
+        @include adaptiv-value("line-height", 22, 20, 0);
+    }
+    .photographer__paragraph {
+        font-weight: 400;
+        @include adaptiv-font(16, 14);
+        @include adaptiv-value("line-height", 24, 22, 0);
+    }
+    .photographer__more {
+        font-weight: 500;
+        @include adaptiv-font(14, 12);
+        @include adaptiv-value("line-height", 21, 19, 0);
+        color: $blue;
+        background: $white;
+        cursor: pointer;
+    }
+    .photographer__more:hover {
+        color: $green;
+    }
+}

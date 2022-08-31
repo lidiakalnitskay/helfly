@@ -1,0 +1,68 @@
+.container-fscr {
+    background-image: url(/img/bg-fscr.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    z-index: -10;
+}
+
+.first-screen {
+    width: 70%;
+    margin: 0 auto;
+    @include adaptiv-value("padding-top", 286, 142, 0);
+    @include adaptiv-value("padding-bottom", 260, 154, 0);
+    @include breakpoint(m) {
+        width: 90%;
+    }
+    &__utp {
+        max-width: 887px;
+        font-weight: 700;
+        @include adaptiv-font(40, 32);
+        @include adaptiv-value("line-height", 49, 39, 0);
+        color: $white;
+        .orange-text {
+            color: $orange;
+        }
+    }
+    &__price {
+        width: 224px;
+        height: 96px;
+        background-image: url(/img/bg-orange.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        padding: 0 22px 0 22px;
+        margin-top: 29px;
+        margin-bottom: 5px;
+        .price__text {
+            padding-top: 8px;
+            padding-bottom: 2px;
+            font-weight: 400;
+            @include adaptiv-font(20, 19);
+            color: $white;
+        }
+        .price__price {
+            font-weight: 800;
+            @include adaptiv-font(35, 33);
+            color: $white;
+        }
+    }
+    .img {
+        width: 52px;
+        height: 52px;
+    }
+    .first-screen__btn {
+        border: 3px solid $white;
+        filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+        border-radius: 3px;
+        background-color: rgba($white, 0);
+        font-weight: 900;
+        @include adaptiv-font(18, 22);
+        @include adaptiv-value("line-height", 22, 20, 0);
+        text-align: center;
+        color: $white;
+        padding: 24px 37px;
+    }
+}

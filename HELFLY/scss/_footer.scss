@@ -1,0 +1,44 @@
+.footer-top {
+    @include adaptiv-value("height", 90, 70, 0);
+    display: flex;
+    align-items: center;
+    .footer-top__container {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include breakpoint(m) {
+            width: 90%;
+        }
+        .footer-top__network {
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            .vk {
+            }
+            .facebook {
+            }
+            .instagram {
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    height: 88px;
+    background: #faf9f8;
+    display: flex;
+    align-items: center;
+    .footer-bottom__container {
+        width: 100%;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #b3b3b3;
+        .footer-bottom__tell {
+            color: #b3b3b3;
+        }
+    }
+}

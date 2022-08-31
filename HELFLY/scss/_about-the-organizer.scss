@@ -1,0 +1,106 @@
+.about-the-organizer {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiv-value("padding-bottom", 51, 31, 0);
+    border-top: 0.5px solid #c7c7c7;
+    border-bottom: 0.5px solid #c7c7c7;
+    width: 70%;
+    margin: 0 auto;
+    @include breakpoint(l) {
+        flex-flow: wrap-reverse;
+    }
+    @include breakpoint(m) {
+        width: 90%;
+    }
+    &__text {
+        .article {
+            max-width: 584px;
+            @include breakpoint(l) {
+                max-width: 100%;
+            }
+            @include adaptiv-value("padding-top", 37, 17, 0);
+            .article__title {
+                padding-bottom: 14px;
+                font-weight: 500;
+                @include adaptiv-font(18, 16);
+                @include adaptiv-value("line-height", 26, 24, 0);
+                color: $black;
+            }
+            .article__text {
+                font-weight: 400;
+                @include adaptiv-font(16, 14);
+                @include adaptiv-value("line-height", 24, 22, 0);
+                color: $black;
+                @include adaptiv-value("padding-bottom", 31, 11, 0);
+            }
+            .article__btn {
+                cursor: pointer;
+                font-weight: 500;
+                @include adaptiv-font(16, 14);
+                @include adaptiv-value("line-height", 23, 21, 0);
+                color: $blue;
+                background-color: rgba($white, 0);
+                @include adaptiv-value("margin-top", -26, -6, 0);
+                img {
+                    vertical-align: baseline;
+                }
+            }
+            .article__btn:hover {
+                color: $green;
+            }
+        }
+    }
+    &__img {
+        display: flex;
+        justify-content: space-between;
+        @include adaptiv-value("padding-top", 55, 35, 0);
+        @include breakpoint(l) {
+            max-width: 270px;
+            margin: 0 auto;
+        }
+        .photographer {
+            display: flex;
+            .photographer__container {
+                width: 194px;
+                text-align: center;
+                margin-left: 50px;
+                @include breakpoint(l) {
+                    margin-left: 0;
+                }
+                .photographer__img {
+                    padding: 10px 0 10px 0;
+                }
+                .photographer__img:hover {
+                    cursor: pointer;
+                    transform: scale(1.2);
+                    transition: 1s;
+                }
+                .photographer__title {
+                    font-weight: 500;
+                    @include adaptiv-font(18, 16);
+                    @include adaptiv-value("line-height", 22, 20, 0);
+                    color: $black;
+                    padding-top: 10px;
+                }
+                .photographer__subtitle {
+                    font-weight: 400;
+                    @include adaptiv-font(14, 12);
+                    @include adaptiv-value("line-height", 21, 19, 0);
+                    color: $black;
+                    padding: 11px 0 7px 0;
+                }
+                .photographer__more {
+                    padding: 10px;
+                    background: $white;
+                    font-weight: 500;
+                    @include adaptiv-font(14, 12);
+                    @include adaptiv-value("line-height", 21, 19, 0);
+                    color: $blue;
+                }
+                .photographer__more:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+}

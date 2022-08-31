@@ -1,0 +1,143 @@
+.reviews {
+    @include adaptiv-value("padding-top", 131, 40, 0);
+    width: 70%;
+    margin: 0 auto;
+    @include breakpoint(m) {
+        width: 90%;
+    }
+    .reviews__title {
+        font-weight: 500;
+        @include adaptiv-font(20, 18);
+        @include adaptiv-value("line-height", 29, 27, 0);
+        color: $black;
+        padding-bottom: 10px;
+        @include breakpoint(m) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .rewiews__blocks {
+        width: 50%;
+        @include breakpoint(xxl) {
+            width: 60%;
+        }
+        @include breakpoint(xl) {
+            width: 70%;
+        }
+        @include breakpoint(l) {
+            width: 80%;
+        }
+        @include breakpoint(m) {
+            width: 100%;
+        }
+        .block {
+            border-bottom: 0.5px solid #c7c7c7;
+            display: flex;
+            padding-top: 40px;
+            .block__img {
+                padding-right: 20px;
+            }
+            .block__content {
+                .review-content__name {
+                    font-weight: 500;
+                    @include adaptiv-font(18, 22);
+                    @include adaptiv-value("line-height", 22, 20, 0);
+                    color: $black;
+                }
+                .review-content__job {
+                    font-size: 14px;
+                    @include adaptiv-font(14, 12);
+                    @include adaptiv-value("line-height", 21, 19, 0);
+                    color: #b3b3b3;
+                    padding-top: 10px;
+                }
+                .review-content__stars {
+                    padding-top: 10px;
+                    display: flex;
+                    .stars {
+                        padding-right: 50px;
+                    }
+                    .super {
+                        display: flex;
+                        @include breakpoint(xl) {
+                            display: none;
+                        }
+                        .super__img {
+                            padding-right: 5px;
+                        }
+                        .super__text {
+                            font-weight: 400;
+                            @include adaptiv-font(14, 12);
+                            @include adaptiv-value("line-height", 21, 19, 0);
+                            color: #b3b3b3;
+                        }
+                    }
+                }
+                .super-hidden {
+                    display: none;
+                    @include breakpoint(xl) {
+                        display: flex;
+                        margin-top: 31px;
+                        margin-left: -120px;
+                    }
+                }
+                .super-hidden__img {
+                    padding-right: 5px;
+                }
+                .super-hidden__text {
+                    font-weight: 400;
+                    @include adaptiv-font(14, 12);
+                    @include adaptiv-value("line-height", 21, 19, 0);
+                    color: #b3b3b3;
+                }
+            }
+        }
+    }
+    .review-content__text {
+        font-weight: 400;
+        @include adaptiv-font(16, 14);
+        @include adaptiv-value("line-height", 24, 22, 0);
+        color: $black;
+        padding: 26px 0 22px 0;
+        @include breakpoint(xl) {
+            margin-left: -120px;
+            padding: 14px 0 17px 0;
+        }
+    }
+    .review-content__data {
+        font-weight: 400;
+        @include adaptiv-font(14, 12);
+        @include adaptiv-value("line-height", 21, 19, 0);
+        color: #b3b3b3;
+        padding-bottom: 35px;
+        @include breakpoint(xl) {
+            margin-left: -120px;
+        }
+    }
+    .rewiews__show-all {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 113px;
+        .rewiews__container {
+            height: 10px;
+            button {
+                background: $white;
+                color: $blue;
+                font-weight: 500;
+                @include adaptiv-font(17, 15);
+                @include adaptiv-value("line-height", 25, 23, 0);
+            }
+            img {
+                vertical-align: middle;
+            }
+            img:first-child {
+                padding-right: 10px;
+            }
+            img:last-child {
+                padding-left: 10px;
+            }
+        }
+    }
+}

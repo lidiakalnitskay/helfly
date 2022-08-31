@@ -1,0 +1,37 @@
+.header {
+    width: 70%;
+    margin: 0 auto;
+    @include adaptiv-value("height", 100, 60, 0);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #b3b3b3;
+    @include breakpoint(m) {
+        width: 90%;
+        justify-content: space-between;
+    }
+    &__tel {
+        padding-left: 36px;
+        font-weight: 400;
+        @include adaptiv-font(14, 12);
+        @include adaptiv-value("line-height", 17, 15, 0);
+        color: #b3b3b3;
+        .tel__link {
+            color: $black;
+        }
+        @include breakpoint(m) {
+            display: none;
+        }
+    }
+    &__city {
+        color: $blue;
+        @include breakpoint(minm) {
+            display: none;
+        }
+    }
+    &__icon {
+        @include breakpoint(minm) {
+            display: none;
+        }
+    }
+}
